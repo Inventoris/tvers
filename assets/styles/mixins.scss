@@ -1,0 +1,41 @@
+@mixin font($fname, $furl, $fweight, $fstyle) {
+  @font-face {
+    font-family: $fname;
+    src: url($furl) format("woff2");
+    font-weight: $fweight;
+    font-style: $fstyle;
+    font-display: swap;
+  }
+}
+
+@mixin hover() {
+  &:hover {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tabletPortrait {
+  @media (max-width: $tabletPortrait) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}

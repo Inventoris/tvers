@@ -1,0 +1,14 @@
+.footer {
+  background-color: $light-grey;
+
+  &__wrapper {
+    padding: 20px 0;
+    justify-content: space-evenly;
+  }
+
+  &__menu {
+    a {
+      font-size: 22px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.post-item {
+  display: block;
+  aspect-ratio: 1 / 1.37;
+  background-color: $light-grey;
+  outline: 2px solid $dark-grey;
+  border-radius: $borderRadius;
+  width: calc((100% / 3) - $gapBetweenCards);
+  overflow: hidden;
+  transition: box-shadow .125s linear;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 0 8px #0000004d;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__image {
+    object-fit: cover;
+    height: 280px;
+    transition: transform .125s linear;
+  }
+
+  &:hover &__image {
+    transform: scale(1.01);
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 30px;
+  }
+
+  &__title {
+    font-size: 23px;
+    margin-bottom: 10px;
+  }
+}

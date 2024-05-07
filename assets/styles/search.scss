@@ -1,0 +1,19 @@
+.search-page {
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__posts-count {
+    display: inline-block;
+    border-radius: $borderRadius;
+    background-color: $dark-grey;
+    padding: 15px 20px;
+    font-size: 22px;
+  }
+
+  &__title_not-found {
+    text-align: center;
+  }
+}

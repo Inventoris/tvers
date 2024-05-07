@@ -1,0 +1,205 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 20px;
+  line-height: 1.5;
+  color: $black;
+  font-family: $roboto;
+  width: 100%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: subpixel-antialiased;
+  overflow-x: hidden;
+  position: relative;
+  &.preload {
+    * {
+      transition: none !important;
+    }
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  display: inline;
+  color: inherit;
+  text-decoration: underline dashed 2px transparent;
+  text-underline-offset: 2px;
+  transition: text-decoration-color .125s linear;
+  text-decoration-skip-ink: none;
+
+  &:hover {
+    text-decoration-color: $black;
+  }
+}
+
+#wpadminbar {
+  position: absolute;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0px 40px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header__wrapper,
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo,
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+
+  img {
+    width: $headerSizes;
+  }
+}
+
+.main {
+  padding-top: $headerSizes;
+}
+
+.case {
+  padding-bottom: 100px;
+}
+
+.padding-top {
+  padding-top: 60px;
+}
+
+.content-case {
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 35px;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gapBetweenCards;
+}
+
+.category-and-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+object.category {
+  outline: 2px solid $dark-grey;
+  background-color: $dark-grey;
+  padding: 2px 10px;
+  border-radius: 8px;
+  transition: background-color .125s linear;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+object.tags {
+  display: flex;
+  gap: 6px;
+
+  a {
+    text-decoration: underline dashed 2px transparent;
+    text-underline-offset: 2px;
+    transition: text-decoration-color .125s linear;
+  }
+
+  a:hover {
+    text-decoration-color: $black;
+    text-decoration-skip-ink: none;
+  }
+}
+
+.ajax-load-more-wrap {
+  width: 100%;
+}
+
+.alm-reveal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gapBetweenCards;
+}
+
+.alm-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.alm-load-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 2px solid $dark-grey;
+  border: none;
+  border-radius: $borderRadius;
+  background-color: $light-grey;
+  width: 500px;
+  padding: 20px;
+  font-size: 18px;
+  transition: background-color .125s linear;
+  cursor: pointer;
+
+  &:not(:disabled):hover {
+    background-color: $dark-grey;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

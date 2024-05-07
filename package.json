@@ -1,0 +1,18 @@
+{
+  "name": "ТВЭРС",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx mix watch",
+    "build": "npx mix --production"
+  },
+  "keywords": [],
+  "author": "Алексей Никитченко",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.27.3",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.25",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0"
+  }
+}
